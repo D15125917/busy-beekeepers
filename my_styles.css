@@ -1,0 +1,394 @@
+/*
+
+Web and User Interface Design Assignment 
+Eoin Dooley 
+D15125917
+
+This is a website designed to provide assistance to people interested in keeping honey bees and those 
+who would be considered as beginners to bee keeping. The website will deliver basic information about 
+bees and bee keeping right through to what is involved in successfully harvesting the rewards – ‘Honey’
+
+PART 2:
+
+A
+
+1. Use of CSS:
+
+2. Use of HTML:
+
+3. How does use of HTML and CSS code address responsiveness?
+
+4. Javascript:
+
+	The Javascript code is saved in the Project.js file.
+	
+	These are two scripts I created to pop up messages on the courses page.
+	=======================================================================
+
+	function mysubmit() {
+		alert("Your application has been submitted, Thank you!");
+	}
+
+	function myalert() {
+		alert("Your details have been deleted, Please start again!");
+	}
+	
+	
+	This scripts I sourced for W3Schools for the responsive navigation bar. It allows the nav bar
+	to be responsive and inserts the hamburger icon when the screen size reduces.
+	=============================================================================================
+	function mynav() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+
+	This is a script that I sourced from W3Schools to search for suppliers on the bee supplies page. On 
+	entering a value in the search box the code searches the suppliers. 
+	==================================================================================================
+	function mySupply() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myInput");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}
+	  }
+	}
+
+5. Use of images. 
+	Images are incorporated in the Gallery. The images were placed in a container and a reponsice class 
+	was set up in my_styles to allow for screen size changes. In desktop view the images are displayed 
+	4 accross the screen. As the screen sizes reduces the number of images displayed accross the row 
+	reduces. In addition to this, when the user clicks on the image, it enlarges on a new page.
+	The images area also given a description underneath and a css3 boarder is places around them.
+	
+	An image is also used in the header of the website. A flower with a bee. This image reduces in size 
+	when the screen size reduces. In addition to this it is a link back to the home page.
+	
+
+6. Use of other technologies:
+	1.	A video of feeding bees is included in the Gallery page.
+		An iframe is used on the Contacts page to include a google maps location map.
+		A form is used on the courses page to register for a course.
+		
+	2. Is believe that the technologies used are appropriate for the theme of the site.
+		i. 	The Gallery page allows the user, who is new to bee keeping, to view what some of the elements 
+			of the hobby that may be of benefit. the video incroporated into this page allows the user to 
+			see what it like when bees are fed correctly. They can get an enlarged image on a new page 
+			(allows for visual imparements). The videos and images are the best way of describing what a 
+			particular situation looks like and as one of the main themes of this site is to education new 
+			beeykeepers, video technology is very appropriate.
+			If there had been more time, addition videos/photos or even new sections 
+			could have been added.
+		ii. The iframe used for the google maps location map is a very useful technology that will 
+			assist users to find the location of Busybeekers. It is very user friendly, which is one 
+			of the main themes of the website.
+		iii.The use of a simple form allows to user to register for a course. It is simple to navigate and 
+			allows the user to be places on a course that is appropriate to their level.
+
+
+
+
+
+
+
+
+
+
+
+*/
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* My table styles*/
+* {
+  box-sizing: border-box;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, 
+
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+ /* Images *============================================================================================================================
+* Added this to the code*/
+textarea {
+    width: 500px;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+/* Banner
+===================================================================*/
+#wrapper {
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);
+}
+
+#wrapper {
+    background-color: #FEF3DD;
+}
+#access .menu-header, #access2 .menu-header, #access3 .menu-header, div.menu, #colophon, #branding, #main, #wrapper {
+    width: 1050px;
+}
+#wrapper {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#wrapper {
+    border: 1px solid #222222;
+    padding-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#wrapper {
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);
+}
+#wrapper {
+    background-color: #FEF3DD;
+}
+#access .menu-header, #access2 .menu-header, #access3 .menu-header, div.menu, #colophon, #branding, #main, #wrapper {
+    width: 1050px;
+}
+#wrapper {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#wrapper {
+    border: 1px solid #222222;
+    padding-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#wrapper {
+    background: #fff;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+#branding {
+    margin-top: -10px;
+}
+
+#access .menu-header, #access2 .menu-header, #access3 .menu-header, div.menu, #colophon, #branding, #main, #wrapper {
+    margin: 0 auto;
+    width: 940px;
+}
+#branding {
+    z-index: 5;
+}
+
+/* Videos code sourced from W3 schools*/
+
+
+/* Social Media Icons - Sourced from <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'> */
+/* Nav Bar */
+ul.topnav {
+  list-style-type: none;
+  
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+img{
+		width: 20%;
+		height: auto;
+		border: 1px solid rgb(38, 38, 38);
+		border-radius: 4px;
+		padding: 2px;
+}
+
+/* Added the image items below*/
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img /* Css3 usage - boarders on images*/
+{
+    width: 100%;
+    height: auto;
+	border-radius: 4px;
+    padding: 5px;
+}
+/* CSS3 usage - text images*/
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+/* CSS3 usage - responsive images*/
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+	#content {
+		position: relative;
+		}
+	#content img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		}
+	#center{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 18px;
+		}
+		
+		/*Button*/
+
+
+/*links*/
+#nav { display: inline;
+	   width: 100px;
+	   letter-spacing:0.1em;
+	   font-weight: bold;
+	   border-right: 1px solid #bbb;
+	   }
+	#menu {
+		
+		height: 35px;
+		font-size: 14px;
+		font-family: Tahoma, Geneva, sans-serif;
+		font-weight: bold;
+		text-align: center;
+		background-color: #505050 ;
+			
+	}
+	#menu li { 
+		display: inline; 
+		padding: 5px; 
+	}
+	#menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 8px 8px 8px;
+	}
+	#menu a:hover {
+		color: #F90;
+		background-color: #eaeaea;
+	}
+	
+	#nav a:link { color: #ffffff; }
+	#nav a:visited { color: #eaeaea; }
+	#nav a:hover { background-color: #eaeaea;
+              color: #869dc7; }
+
+
+
+
+
