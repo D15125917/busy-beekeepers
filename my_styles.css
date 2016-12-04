@@ -1,0 +1,253 @@
+/*
+Web and User Interface Design Assignment 
+Eoin Dooley 
+D15125917
+
+A seperate report provides the answers to the individaul questions presented in dection 2 and 3 of the project
+============================================================================================================*/
+
+
+/*  SECTIONS  
+==========*/
+.section { /* a class was created for the section as it is called on several times - html5*/
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* My table styles. This code is used in the Suppliers page
+=========================================================*/
+* {
+  box-sizing: border-box;
+}
+/* all of the code below code is related to the table on the 
+suppliers page. IDs were set up these individaul elements*/
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgb(221, 221, 221);
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+#myTable tr.header, 
+
+#myTable tr:hover {/*Pseudo usage*/
+  background-color: rgb(215, 215, 215);
+}
+
+ /* Images
+ =========================================================================================================*/
+ 
+ 
+/*Tables
+==========================================================================================================*/
+/* Added this ID to the code - allows for a text area on the courses page to allow for additional information*/
+#textarea {
+    width: 500px;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid 	rgb(89, 89, 89);
+    border-radius: 4px;
+    background-color: rgb(248, 248, 248);
+    font-size: 16px;
+    resize: none;
+}
+
+/* Videos code sourced from W3 schools
+The code was used in the gallery page
+====================================*/
+
+
+/* Nav Bar - Responsive navigation bar code sourced from W3Schools
+================================================================
+The sourced code was altered as required to fit the webpage. 
+Classes were used as the navigation bar will be the same on all pages*/
+ul.topnav {
+  list-style-type: none;
+  
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(51, 51, 51);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: rgb(242, 242, 242);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: rgb(85, 85, 85);}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+/* CSS3 usage - included a border around the images in the website
+================================================================*/
+
+img{
+		width: 20%;
+		height: auto;
+		border: 1px solid rgb(38, 38, 38);
+		border-radius: 4px;
+		padding: 2px;
+}
+
+/* Added the image items below - Classes and Pseudo classes*/
+
+div.img:hover {/*Pseudo class usage*/
+    border: 1px solid rgb(119, 119, 119);
+}
+
+div.img img /* Css3 usage - boarders on images*/
+{
+    width: 100%;
+    height: auto;
+	border-radius: 4px;
+    padding: 5px;
+}
+/* CSS3 usage - text images*/
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+/* CSS3 usage - responsive images, original code was sourced from W3schools, it has bee altered*/
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {/*Pseudo class usage*/
+    content: "";
+    display: table;
+    clear: both;
+}
+	#content {
+		position: relative;
+		}
+	#content img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		}
+	#center{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 18px;
+		}
+		
+		/*Button*/
+
+
+/*links - this was an earlier version not used.
+#nav { display: inline;
+	   width: 100px;
+	   letter-spacing:0.1em;
+	   font-weight: bold;
+	   border-right: 1px solid rgb(187, 187, 187);
+	   }
+	#menu {
+		
+		height: 35px;
+		font-size: 14px;
+		font-family: Tahoma, Geneva, sans-serif;
+		font-weight: bold;
+		text-align: center;
+		background-color: rgb(80, 80, 80) ;
+			
+	}
+	#menu li { 
+		display: inline; 
+		padding: 5px; 
+	}
+	#menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 8px 8px 8px;
+	}
+	#menu a:hover {
+		color: #F90;
+		background-color: rgb(234, 234, 234);
+	}
+	
+	#nav a:link { color: rgb(255, 255, 255); }
+	#nav a:visited { color: rgb(234, 234, 234); }
+	#nav a:hover { background-color: rgb(234, 234, 234);
+              color: rgb(134, 157, 199); }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
